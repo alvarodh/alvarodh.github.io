@@ -1,0 +1,95 @@
+body {
+  font-family: monospace;
+}
+
+#header {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+}
+
+#container {
+  float: left;
+  width: 35%;
+  margin: 5%;
+}
+
+#crono {
+  float: left;
+  border-radius: 75px;
+  text-align: center;
+  padding: 1.5%;
+  margin: 5%;
+  font-size: 150%;
+  background-color: Pink;
+  border-bottom: 7.5px solid Green;
+  margin-top: 5%;
+}
+
+#hours, #minutes, #seconds {
+  float: none;
+}
+
+#buttons {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+#start, #change, #showrecords, #hiderecords, #restart {
+  padding: 15px;
+  font-size: 15px;
+  color: Green;
+  border: 3px solid Green;
+  border-radius: 25px;
+  text-align: center;
+  background-color: Pink;
+}
+
+
+#select {
+  text-align: center;
+  color: Green;
+  background-color: Pink;
+  border-bottom: 7.5px solid Green;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  padding: 25px;
+}
+
+#winmessage {
+  padding: 15%;
+  text-align: center;
+  background: top center no-repeat;
+  height: 100%;
+  font-size: 100%;
+}
+
+#img1, #img2, #img3 {
+  height: 25%;
+  border: 2.5px solid Green;
+  border-radius: 150px;
+}
+
+#complete {
+  float: right;
+  margin: 5%;
+  border: 2.5px solid Green;
+}
+
+#puzzle {
+  border: 1px solid Black;
+  float: left;
+}
+
+#record {
+  color: Green;
+  border: 5px solid Green;
+  background-color: Pink;
+  margin: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
