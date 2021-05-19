@@ -2,14 +2,101 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Súper-Título</title>
+    <title>Súper-Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/master.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
   </head>
   <body>
-    <p>Ola k ase</p>
-    <a href="pacman/index.html"><img src="static/image/pac-man-logo.gif" alt="PacMan"></a>
-    <a href="pong/index.html">Pong 2D</a>
-    <a href="pong_3d/index.html"><img src="static/image/Pong.jpg" alt="Pong 3D"></a>
-    <a href="snake/index.html"><img src="static/image/snake_game_NOKIA-640x353.jpg" alt="Snake"></a>
-    <a href="space_invaders/index.html"><img src="static/image/space-invaders.png" alt="Space-Invaders"></a>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Top navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="gameImage" src="static/image/pac-man-logo.gif" alt="PacMan">
+              <div class="card-body">
+                <p class="card-text">Pacman</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button id="pacman" type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Show code</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="gameImage" src="static/image/snake_game_NOKIA-640x353.jpg" alt="Snake">
+              <div class="card-body">
+                <p class="card-text">Snake</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button id="snake" type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Show code</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="gameImage" src="static/image/Pong.jpg" alt="Pong 3D">
+              <div class="card-body">
+                <p class="card-text">Pong</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button id="pong" type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Show code</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="gameImage" src="static/image/space-invaders.jpg" alt="Space-Invaders">
+              <div class="card-body">
+                <p class="card-text">Space Invaders</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button id="spaceinvaders" type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Show code</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="gameScenario"></div>
+    <script src="static/js/main.js"></script>
   </body>
 </html>

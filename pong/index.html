@@ -1,17 +1,108 @@
+<!--
+Partes implementadas:
+  - Funcionalidad básica
+  - Funcionalidad avanzada: ángulo de rebote variable, velocidad de
+    desplazamiento vertical variable, posibilidad de ganar a la CPU
+  - Extras: Selección de texturas, selección de nivel, sonido basado en
+    texturas, selección de FOV, selección de goles para conseguir la
+    victoria, velocidad incial de la bola depende de la dificultad,
+    marcador con gráfico 3D en lugar de como texto HTML
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolillas mágicas</title>
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="master.css">
-</head>
-<body> <br>
-    <canvas id="gameScenario"></canvas> <br>
-    <button id = startButton>START</button> <br><br>
-    <button id="leftButton">LEFT</button>
-    <button id="rightButton">RIGHT</button>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="static/image/pollo.png">
+    <meta charset="utf-8">
+    <title>Súper-Pong</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    <!-- LIBRERIAS DE JAVASCRIPT UTILIZADAS -->
+    <script src="static/js/lib/three.min.js"></script>
+    <script src="static/js/lib/jquery.min.js"></script>
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="static/css/master.css">
+    <!-- FICHERO JAVASCRIPT -->
+    <script src="static/js/main.js" defer></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Top navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+    <img class="water-mark" src="static/image/pollo.png" alt=""/>
+    <div class="container">
+      <h1 class="title">SÚPER-PONG</h1>
+      <div id="mode">
+        CHOOSE MODE:<br>
+        <label class="selector">
+          <input id="football" type="radio" name="mode" value="football" checked/>
+          <img style="height:25px;" src="static/image/football.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="space" type="radio" name="mode" value="space"/>
+          <img style="height:25px;" src="static/image/ship.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+     </div>
+     <br>
+      <div id="difficulty">
+        CHOOSE IA DIFFICULTY:<br>
+        <label class="selector">
+          <input id="easy" type="radio" name="difficulty" value="5" checked/>EASY
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="medium" type="radio" name="difficulty" value="2"/>MEDIUM
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="high" type="radio" name="difficulty" value="-2"/>HIGH
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="impossible" type="radio" name="difficulty" value="-5"/>
+          <img style="height:25px;" src="static/image/calavera.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+     </div>
+     <br>
+      <div id="options">
+        <div id="goals">
+          GOALS FOR WIN: <input id="max-score" type="number" min="1" max="99" value="5"/><br>
+          (between 1 and 99)
+        </div>
+        <br>
+        <audio id="audio" src="static/audio/mision_imposible.mp3" preload="auto" autoplay></audio>
+        use <img id="arrow-img" src="static/image/arrows.webp" alt=""/> for move left and right
+        <br><br>
+        <div id="FOV">
+          CHOOSE FOV: <input id="fov-value" type="number" min="15" max="180" step="15" value="90"/><br>
+          (recommended: 75, 90, 120)
+        </div>
+      </div>
+      <br>
+      <div id="start">
+        PRESS SPACEBAR TO START
+      </div>
+    </div>
+
+  </body>
 </html>

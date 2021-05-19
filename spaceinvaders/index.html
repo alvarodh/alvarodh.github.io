@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Súper-Pacman</title>
-    <!-- Bootstrap CSS only -->
+    <title>Súper Space-Invaders</title>
+    <meta chaset="utf-8">
+    <link rel="stylesheet" href="css/master.css">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lib/animate.min.css">
-    <script src="js/main.js"></script>
   </head>
-  <body onload="charge()">
+  <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <div class="container-fluid">
@@ -30,14 +28,22 @@
       </div>
     </nav>
 
-    <p id="title" class="animated tada">SUPER-PA1-MAN</p>
-    <div id="select"></div>
-    <div id="crono"></div>
-    <div id="controls"></div>
-    <div id="pacman">
-      <canvas id="canvas"></canvas>
+    <div id="galaxy"></div>
+    <div id="container">
+      <canvas id="gameCanvas"></canvas>
     </div>
-    <div id="name"></div>
-    <div id="scores"></div>
+    <div id="info">
+      <span>| Move with <img id="move" src="images/arrows.png"/></span>
+      <span>| Press "P" for pause |</span>
+    </div>
+    <script src="js/states/welcome.js"></script>
+    <script src="js/states/gameover.js"></script>
+    <script src="js/states/play.js"></script>
+    <script src="js/states/pause.js"></script>
+    <script src="js/states/levelintro.js"></script>
+    <script src="js/starfield.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
