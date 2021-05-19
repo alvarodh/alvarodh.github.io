@@ -1,0 +1,86 @@
+<!--
+Partes implementadas:
+  - Funcionalidad básica
+  - Funcionalidad avanzada: ángulo de rebote variable, velocidad de
+    desplazamiento vertical variable, posibilidad de ganar a la CPU
+  - Extras: Selección de texturas, selección de nivel, sonido basado en
+    texturas, selección de FOV, selección de goles para conseguir la
+    victoria, velocidad incial de la bola depende de la dificultad,
+    marcador con gráfico 3D en lugar de como texto HTML
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="static/image/pollo.png">
+    <meta charset="utf-8">
+    <title>Súper-Pong</title>
+    <!-- LIBRERIAS DE JAVASCRIPT UTILIZADAS -->
+    <script src="static/js/lib/three.min.js"></script>
+    <script src="static/js/lib/jquery.min.js"></script>
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="static/css/master.css">
+    <!-- FICHERO JAVASCRIPT -->
+    <script src="static/js/main.js" defer></script>
+  </head>
+  <body>
+    <img class="water-mark" src="static/image/pollo.png" alt=""/>
+    <div class="container">
+      <h1 class="title">SÚPER-PONG</h1>
+      <div id="mode">
+        CHOOSE MODE:<br>
+        <label class="selector">
+          <input id="football" type="radio" name="mode" value="football" checked/>
+          <img style="height:25px;" src="static/image/football.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="space" type="radio" name="mode" value="space"/>
+          <img style="height:25px;" src="static/image/ship.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+     </div>
+     <br>
+      <div id="difficulty">
+        CHOOSE IA DIFFICULTY:<br>
+        <label class="selector">
+          <input id="easy" type="radio" name="difficulty" value="5" checked/>EASY
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="medium" type="radio" name="difficulty" value="2"/>MEDIUM
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="high" type="radio" name="difficulty" value="-2"/>HIGH
+          &nbsp<span class="checkmark"></span>
+        </label>
+        <label class="selector">
+          <input id="impossible" type="radio" name="difficulty" value="-5"/>
+          <img style="height:25px;" src="static/image/calavera.png" alt=""/>
+          &nbsp<span class="checkmark"></span>
+        </label>
+     </div>
+     <br>
+      <div id="options">
+        <div id="goals">
+          GOALS FOR WIN: <input id="max-score" type="number" min="1" max="99" value="5"/><br>
+          (between 1 and 99)
+        </div>
+        <br>
+        <audio id="audio" src="static/audio/mision_imposible.mp3" preload="auto" autoplay></audio>
+        use <img id="arrow-img" src="static/image/arrows.webp" alt=""/> for move left and right
+        <br><br>
+        <div id="FOV">
+          CHOOSE FOV: <input id="fov-value" type="number" min="15" max="180" step="15" value="90"/><br>
+          (recommended: 75, 90, 120)
+        </div>
+      </div>
+      <br>
+      <div id="start">
+        PRESS SPACEBAR TO START
+      </div>
+    </div>
+
+  </body>
+</html>

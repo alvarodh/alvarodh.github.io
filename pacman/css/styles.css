@@ -1,0 +1,100 @@
+@font-face {
+  font-family: pacman-font;
+  src: url("font/PAC-FONT.TTF");
+}
+
+body {
+  background-color: black;
+  color: yellow;
+  font-family: monospace;
+}
+
+#title {
+  width: 100%;
+  font-size: 500%;
+  text-align: center;
+  font-family: pacman-font;
+  margin-top: 5%;
+}
+
+#pacman_title {
+  margin: 5% 25% auto 25%;;
+  width: 50%;
+}
+
+#pacman {
+  width: 25%;
+  margin: 5% auto 37.5% 37.5%;
+}
+
+#select {
+  margin: 5%;
+  float: left;
+  position: absolute;
+  text-align: center;
+  font-family: pacman-font;
+}
+
+#yellow, #cyan, #magenta {
+  width: 15%;
+}
+
+#crono {
+  float: right;
+  margin: 17.5% 10% auto auto;
+  text-align: center;
+}
+
+#controls {
+  color: black;
+  position: absolute;
+  background-image: url("../images/paper.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3.5%;
+}
+
+#arrows {
+  width: 5%;
+}
+
+#name, #nick {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: yellow;
+  font-size: 150%;
+  margin-top: 5%;
+  color: yellow;
+  font-family: pacman-font;
+}
+
+#name2 {
+  text-align: left;
+  margin-left: 16.5%;
+}
+
+#name {
+  text-align: center;
+}
+
+#start {
+  background-color: transparent;
+  color: yellow;
+  font-size: 100%;
+  font-family: pacman-font;
+  padding: 2.5%;
+  border: 2.5px solid yellow;
+  border-radius: 150px;
+}
+
+#scores {
+  width: 50%;
+  font-size: 75%;
+  float: right;
+}
+
+.clock {
+	float: left;
+	font-size: 250%;
+	color: yellow;
+}
